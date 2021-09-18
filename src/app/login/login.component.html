@@ -1,0 +1,17 @@
+<body class="text-center">
+<form class="form-signin">
+  <img  src="../../assets/img/logo.png" alt="" width="50%">
+  <h1 class="h3 mb-3 font-weight-normal">Please Admin Sign In</h1>
+  <div class="alert alert-{{p}}" role="alert">
+    <h6>{{currentval}}</h6>
+  </div>
+  <label for="inputEmail" class="sr-only">Username</label>
+  <input type="text" id="inputEmail" class="form-control" placeholder="Enter Your Username" required autofocus #user>
+  <br>
+  <label for="inputPassword" class="sr-only">Password</label>
+  <input type="password" id="inputPassword" class="form-control" placeholder="Password" required #pass>
+  
+  <button class="btn btn-lg btn-dark btn-block" (click)="getVal(user.value,pass.value)" >Sign in</button>
+  <p class="mt-5 mb-3 text-muted" style="text-align: center;">&copy; 2021 GIET University </p>
+</form>
+</body>

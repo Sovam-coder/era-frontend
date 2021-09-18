@@ -1,0 +1,31 @@
+<app-header></app-header>
+<div class="jumbotron" style="background-color: black;">
+    <div class="row" *ngFor="let x of getuser">
+        <div class="col">
+            <img src="{{x.basicdetails.photo}}"  class="rounded" alt="" width="30%">
+        </div>
+        <div class="col">
+            <br>
+            <label style="color: grey;">Name :</label>
+            <h5 style="color: white;">{{x.basicdetails.name}}</h5>
+            <label style="color: grey;">Employee Id </label>
+            <h5 style="color: white;">{{x.basicdetails.empid}}</h5>
+            <label style="color: grey;">Contact No :</label>
+            <h5 style="color: white;">{{x.basicdetails.mobile}}</h5>
+            <label style="color: grey;">Email id :</label>
+            <h5 style="color: white;">{{x.basicdetails.emailid}}</h5>
+        </div>
+        <div class="col">
+            <br>
+            <label style="color: grey;">Address</label>
+            <h5 style="color: white;">{{x.basicdetails.address}}</h5>
+            <!-- <label style="color: grey;">Basic Pay</label>
+            <h5 style="color: white;">{{x.payrollsection.basicpay}}</h5> -->
+            <!-- <label style="color: grey;">Tax</label>
+            <h5 style="color: white;">{{x.payrollsection.tax}}</h5> -->
+            <!-- <label style="color: grey;">Total Pay</label>
+            <h5 style="color: white;">{{x.payrollsection.totalpay}}</h5> -->
+        </div>
+        
+      </div>
+</div>

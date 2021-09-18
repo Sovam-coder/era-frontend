@@ -1,0 +1,64 @@
+<app-header></app-header>
+<div class="jumbotron" style="background-color: black;">
+    <h1 style="color: grey;">Create User Form</h1>
+    <br>
+    <a href="https://attendance-system-265c6.web.app/create" style="color: yellow;">Create the new user for Attendance</a>
+    <br>
+    <br>
+<form [formGroup] = "createUserForm" (ngSubmit) = "createUser()">
+    <label style="color: white;">Upload Your Photo</label>
+    <input type="file" (change)="fileSelected($event)">      
+     <p style="color: white;">Document Preview</p>
+     <img [src]="imagebuffer" style="max-height: auto;max-width: 50%;">
+<br>
+        <label style="color: white;">Name : </label>
+        <input type="text" formControlName="name" class="form-control" placeholder="name">
+        <label style="color: white;">Address</label>
+        <input type="text" formControlName="address" class="form-control" placeholder="Enter Address">
+        <label style="color: white;">Mobile</label>
+        <input type="text" formControlName="mobile" class="form-control" placeholder="Enter Mobile">
+        <label style="color: white;">Emp Id : </label>
+        <input type="text" formControlName="empid" class="form-control" >
+        <label style="color: white;">Employee Password</label>
+        <input type="text" formControlName="emppassword" class="form-control" >
+
+        <label style="color: white;">Email id </label>
+        <input type="text" formControlName="emailid" class="form-control" >
+        <label style="color: white;">Basic Pay </label>
+        <input type="number" formControlName="basicpay" class="form-control" >
+ 
+        <label style="color: white;">Last Updated </label>
+        <input type="text" formControlName="lastupdated" class="form-control" >
+
+        <label style="color: white;">Tax </label>
+        <input type="number" formControlName="tax" class="form-control" >
+
+        <label style="color: white;"> Bonus</label>
+        <input type="number" formControlName="bonus" class="form-control" >
+
+        <label style="color: white;">Total Pay </label>
+        <input type="number" formControlName="totalpay" class="form-control" >
+
+        <label style="color: white;">Status of Apply </label>
+        <input type="text" formControlName="statusofleave" class="form-control" >
+
+        <label style="color: white;">Date of Apply </label>
+        <input type="text" formControlName="dateofapply" class="form-control" >
+
+        <label style="color: white;">Attendance</label>
+        <input type="text" formControlName="attendance" class="form-control" >
+
+        <br>
+    <button class="btn btn-warning">Submit</button>
+</form>
+
+<!-- image code -->
+
+<!-- <form [formGroup]="addPreviousOrgform" >
+
+<input type="file" (change)="fileSelected($event)">      
+     <button class="btn btn-primary" >Submit</button>
+     <p>Document Preview</p>
+     <img [src]="imagebuffer" style="max-height: auto;max-width: 50%;">
+    </form>
+</div> -->
